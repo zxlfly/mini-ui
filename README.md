@@ -124,3 +124,54 @@ app.component('DemoBlock',DemoBlock)
 修改cli的package.json添加script
 ### create命令
 !todo
+### build
+- package.json
+  - ``"main": "vue-devui.umd.js"``
+    - 浏览器script引入
+  - ``"module": "vue-devui.es.js"``
+    - 提供模块引入
+  - scripts
+    - 加入执行脚本
+    - ``"build:components": "node ./myui-cli/src/commands/build.js"``
+    - ``"build:lib": "yarn build:components && cp package.json build && cp README.md build"``
+- 分全量和单个按需
+
+# monorepo 改造，方便管理多包
+- 安装
+  - ``npm i lerna -g``
+  - npx也行
+- 初始化lerna
+  - ``lerna init``
+- 配置``lerna.json``
+- 配置package.json
+  - 可以用lerna管理命令行相关操作
+  ```
+  "workspaces": [
+    "packages/*"
+  ]
+  ```
+  - ``"private": true,``
+    - 不发主包
+- 创建子包
+  - ``lerna create mini-ui -y``
+- 将原来的ui目录cli目录文档目录移动到该子包中，package.json和jest.config.json也需要复制进去，其他的删除
+- 安装依赖
+  - ``lerna bootstrap``
+- 本地启动
+  - ``lerna exec --scope mini-ui yarn docs:dev``
+- 构建
+  - ``lerna exec --scope mini-ui yarn docs:build``
+- 抽离``myui-cli``
+  - 先测试下现在的结构功能是否正常
+    - ``lerna exec --scope mini-ui yarn cli:build``
+    - ``lerna exec --scope mini-ui yarn cli``
+- 重复上面步骤即可
+  - ``lerna exec --scope myui-cli yarn cli:build``
+  - ``lerna exec --scope myui-cli yarn cli``
+- 关于``node_modules``
+  - 子包可以直接使用主包
+  - 子包之间也可相互使用
+    - 只需要前面加上子包名即可
+    - 不需要配置别名
+- 关于输出``lib``位置，这里选择的``mini-ui``子包目录
+  
