@@ -1,6 +1,9 @@
 # myui
 ui组件存放目录
 
+# docs
+文档，基于vitepress
+
 # 脚手架开发（cli）
 - 依赖三方插件
   - ``commander``插件提供用于命令注册、参数解析、执行回调
