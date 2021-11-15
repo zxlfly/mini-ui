@@ -139,7 +139,6 @@ app.component('DemoBlock',DemoBlock)
 # monorepo 改造，方便管理多包
 - 安装
   - ``npm i lerna -g``
-  - npx也行
 - 初始化lerna
   - ``lerna init``
 - 配置``lerna.json``
