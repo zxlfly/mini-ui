@@ -1,11 +1,17 @@
-# Vue 3 + Typescript + Vite
+# myui
+ui组件存放目录
 
-This template should help get you started developing with Vue 3 and Typescript in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+# 脚手架开发（cli）
+- 依赖三方插件
+  - ``commander``插件提供用于命令注册、参数解析、执行回调
+  - ``inquirer``插件用于命令行交互
+  - ``fs-extra``插件是对于nodejs文件Api的进一步封装
+  - ``kolorist``插件用于输出颜色信息
+- 初始化cli
+  - 创建cli目录,初始化node项目
+  - 创建入口文件
+  - 安装依赖
+- 安装``esbuild``
+- create命令
 
-## Recommended IDE Setup
-
-- [VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=johnsoncodehk.volar)
-
-## Type Support For `.vue` Imports in TS
-
-Since TypeScript cannot handle type information for `.vue` imports, they are shimmed to be a generic Vue component type by default. In most cases this is fine if you don't really care about component prop types outside of templates. However, if you wish to get actual prop types in `.vue` imports (for example to get props validation when using manual `h(...)` calls), you can enable Volar's `.vue` type support plugin by running `Volar: Switch TS Plugin on/off` from VSCode command palette.
+**目前模块是分开的，没有合在一起，相当于对个子项目独立，需要单独安装配置**
