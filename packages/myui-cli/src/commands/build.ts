@@ -5,9 +5,15 @@ const vue = require('@vitejs/plugin-vue')
 const vueJsx = require('@vitejs/plugin-vue-jsx')
 const fsExtra = require('fs-extra')
 // 入口
-const entryDir = path.resolve(__dirname, '../../../myui')
+const entryDir = path.resolve(__dirname, '../../../mini-ui/myui')
+// console.log('entryDir:',entryDir);
+console.log(path.resolve(entryDir, 'vue-miniui.ts'));
+
+
 // 出口
-const outputDir = path.resolve(__dirname, '../../../build')
+const outputDir = path.resolve(__dirname, '../../build')
+// console.log('outputDir:',outputDir);
+
 // 打包配置
 const baseConfig = defineConfig({
   configFile: false,

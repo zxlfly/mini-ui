@@ -133,7 +133,7 @@ app.component('DemoBlock',DemoBlock)
   - scripts
     - 加入执行脚本
     - ``"build:components": "node ./myui-cli/src/commands/build.js"``
-    - ``"build:lib": "yarn build:components && cp package.json build && cp README.md build"``
+    - ``"build:lib": "yarn build:components && copy package.json build && copy README.md build"``
 - 分全量和单个按需
 
 # monorepo 改造，方便管理多包
@@ -162,8 +162,8 @@ app.component('DemoBlock',DemoBlock)
   - ``lerna exec --scope mini-ui yarn docs:build``
 - 抽离``myui-cli``
   - 先测试下现在的结构功能是否正常
-    - ``lerna exec --scope mini-ui yarn cli:build``
-    - ``lerna exec --scope mini-ui yarn cli``
+    - ``lerna exec --scope myui-cli yarn cli:build``
+    - ``lerna exec --scope myui-cli yarn cli``
 - 重复上面步骤即可
   - ``lerna exec --scope myui-cli yarn cli:build``
   - ``lerna exec --scope myui-cli yarn cli``
@@ -172,5 +172,4 @@ app.component('DemoBlock',DemoBlock)
   - 子包之间也可相互使用
     - 只需要前面加上子包名即可
     - 不需要配置别名
-- 关于输出``lib``位置，这里选择的``mini-ui``子包目录
   
