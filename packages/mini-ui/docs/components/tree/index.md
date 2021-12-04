@@ -30,6 +30,8 @@ export default defineComponent({
         }]
       }, {
         label: '二级 2-2', level: 2,
+        disableToggle: true,
+        disabled:true,
         children: [{
           label: '三级 2-2-1', level: 3,
         }]

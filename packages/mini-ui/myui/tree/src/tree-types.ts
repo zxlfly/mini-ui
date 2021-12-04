@@ -2,7 +2,8 @@ import type { PropType, ExtractPropTypes } from 'vue'
 
 export interface TreeItem {
   label: string
-  children: TreeData
+  children?: TreeData
+  disableToggle?: boolean
   [key: string]: any
 }
 

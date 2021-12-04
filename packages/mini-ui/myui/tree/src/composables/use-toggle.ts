@@ -14,6 +14,7 @@ export default function useToggle(data: TreeData): any {
 
   const toggle = (item: TreeItem) => {
     if (!item.children) return
+    if (item.disableToggle) return
     item.open = !item.open
     openedData.value = openedTree(data)
   }
