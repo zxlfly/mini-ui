@@ -5,6 +5,7 @@
   "module": "mini-ui.es.js",
   "private": true,
   "scripts": {
+      "dev":"lerna exec --scope mini-ui yarn docs:dev"
   },
   "dependencies": {
     "vue": "^3.2.16"

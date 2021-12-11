@@ -13,7 +13,7 @@ export default defineComponent({
   props: treeProps,
   emits: [],
   setup(props: TreeProps, ctx) {
-    const { data } = toRefs(props)
+    const { data,checkable } = toRefs(props)
     const { openedData, toggle } = useToggle(data.value)
     const { nodeClassNameReflect, handleInitNodeClassNameReflect, handleClickOnNode } = useHighlightNode()
 
@@ -23,11 +23,13 @@ export default defineComponent({
     }
     const renderIcon = (item: TreeItem) => {
       return item.children
-        ? <span class={item.disableToggle && 'toggle-disabled'}>
+        ? <span onClick={() => toggle(item)} class={item.disableToggle && 'toggle-disabled'}>
           {
-            item.open
-              ? <IconOpen class='mr-xs' onClick={() => toggle(item)} />
-              : <IconClose class='mr-xs' onClick={() => toggle(item)} />
+            ctx.slots.icon
+              ? ctx.slots.icon(item)
+              : item.open
+                ? <IconOpen class='mr-xs' />
+                : <IconClose class='mr-xs' />
           }
         </span>
         : <Indent />
@@ -40,13 +42,16 @@ export default defineComponent({
           class={['devui-tree-node', open && 'devui-tree-node__open']}
           style={{ paddingLeft: `${24 * (level - 1)}px` }}
         >
-          <div 
-            class={['devui-tree-node__content',nodeClassNameReflect.value[nodeId]]}
+          <div
+            class={['devui-tree-node__content', nodeClassNameReflect.value[nodeId]]}
             onClick={() => handleClickOnNode(nodeId)}
           >
             <div class="devui-tree-node__content--value-wrapper">
               {
                 renderIcon(item)
+              }
+              { 
+                checkable.value && <input type="checkbox" v-model={item.checked} />
               }
               <span class={['devui-tree-node__title', item.disabled && 'select-disabled']}>{label}</span>
             </div>
