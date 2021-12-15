@@ -21,6 +21,7 @@ jsx语法最早出现于react中，babel默认解析转译出来的是针对reac
 - [husky](https://github.com/typicode/husky)
   - commit-msg
   - pre-commit
+  - pre-push
 - [commitizen](https://github.com/commitizen/cz-cli)
   - 规范提交信息
   - 采用项目局部安装，也可以全局
@@ -51,6 +52,7 @@ jsx语法最早出现于react中，babel默认解析转译出来的是针对reac
     ```
 - [standard-version](https://github.com/conventional-changelog/standard-version)
   - CHANGELOG 自动生成
+  - 配置：``versionrc.js``
 
 # docs(文档)
 ### VitePress文档系统
