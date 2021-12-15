@@ -2,6 +2,20 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.4](https://github.com/zxlfly/mini-ui/compare/v0.0.2...v0.0.4) (2021-12-15)
+
+
+### Features
+
+* test ([346231d](https://github.com/zxlfly/mini-ui/commit/346231dcefc35c87159e7019f6f388c4ae34bb05))
+
+
+### Bug Fixes
+
+* 修复没有自动生成log问题 ([613037e](https://github.com/zxlfly/mini-ui/commit/613037ef9440a75edcfcd20e8100fef559c09d2d))
+* 修复验证失效问题 ([38d780a](https://github.com/zxlfly/mini-ui/commit/38d780a76f12324a9e22cb9df1b977f51a51197e))
+* 修复lint-staged bug ([8b0fac2](https://github.com/zxlfly/mini-ui/commit/8b0fac2c2a1e2090baa43ba484fa3cbea569f768))
+
 ### [0.0.3](https://github.com/zxlfly/mini-ui/compare/v0.0.2...v0.0.3) (2021-12-15)
 
 
