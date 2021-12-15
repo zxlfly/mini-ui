@@ -58,7 +58,7 @@
       "stylelint --fix"
     ],
     "src/**/*.{js,vue,ts,tsx}": [
-      "eslint --fix"
+      "npm run lint"
     ]
   }
 }
