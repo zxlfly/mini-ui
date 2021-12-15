@@ -1,7 +1,7 @@
-'use strict';
+"use strict"
 
-const myuiCli = require('..');
+const myuiCli = require("..")
 
-describe('myui-cli', () => {
-    it('needs tests');
-});
+describe("myui-cli", () => {
+	it("needs tests")
+})

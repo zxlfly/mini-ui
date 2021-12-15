@@ -1,17 +1,17 @@
-import type { App } from 'vue'
-import TreeInstall, { Tree } from './tree'
+import type { App } from "vue"
+import TreeInstall, { Tree } from "./tree"
 
 const installs = [
-  TreeInstall,
+	TreeInstall,
 ]
 
 export {
-  Tree,
+	Tree,
 }
 
 export default {
-  version: '0.0.1',
-  install(app: App): void {
-    installs.forEach((p) => app.use(p as any))
-  }
+	version: "0.0.1",
+	install(app: App): void {
+		installs.forEach((p) => app.use(p as any))
+	}
 }

@@ -17,6 +17,41 @@ jsx语法最早出现于react中，babel默认解析转译出来的是针对reac
 ``yarn add -D @vitejs/plugin-vue-jsx``  
 在``vite.config.ts``的plugins中引入vueJsx插件
 
+### 增加校验
+- [husky](https://github.com/typicode/husky)
+  - commit-msg
+  - pre-commit
+- [commitizen](https://github.com/commitizen/cz-cli)
+  - 规范提交信息
+  - 采用项目局部安装，也可以全局
+  - ``npm install commitizen cz-conventional-changelog -D``
+  - 然后修改配置文件
+    - 新增config->commitizen
+      - ``"path": "cz-conventional-changelog"``,
+      - 可以设置中文翻译对应的选项
+    - scripts
+      - ``"commit": "cz"``
+  - **项目内安装，只能在当前项目目录下 npm run commit 代替 git commit**
+- [commitlint](https://github.com/conventional-changelog/commitlint/tree/master/@commitlint/prompt)
+  - 对提交信息校验
+  - 新增``commitlint.config.js``
+  - 可以删除config->commitizen
+- [lint-staged](https://github.com/okonet/lint-staged)
+  - 校验修改的那部分文件
+  - ``npx mrm@2 lint-staged``
+  - 修改配置文件
+    - 
+    ```
+      "lint-staged": {
+        "src/**/*.scss": [
+          "stylelint --fix"
+        ],
+        "src/**/*.{js,vue,ts,tsx}": "eslint --fix"
+      }
+    ```
+- [standard-version](https://github.com/conventional-changelog/standard-version)
+  - CHANGELOG 自动生成
+
 # docs(文档)
 ### VitePress文档系统
 安装vitepress``yarn add -D vitepress``  
@@ -133,7 +168,7 @@ app.component('DemoBlock',DemoBlock)
   - scripts
     - 加入执行脚本
     - ``"build:components": "node ./myui-cli/src/commands/build.js"``
-    - ``"build:lib": "yarn build:components && cp package.json build && cp README.md build"``
+    - ``"build:lib": "yarn build:components && copy package.json build && copy README.md build"``
 - 分全量和单个按需
 
 # monorepo 改造，方便管理多包
@@ -162,8 +197,8 @@ app.component('DemoBlock',DemoBlock)
   - ``lerna exec --scope mini-ui yarn docs:build``
 - 抽离``myui-cli``
   - 先测试下现在的结构功能是否正常
-    - ``lerna exec --scope mini-ui yarn cli:build``
-    - ``lerna exec --scope mini-ui yarn cli``
+    - ``lerna exec --scope myui-cli yarn cli:build``
+    - ``lerna exec --scope myui-cli yarn cli``
 - 重复上面步骤即可
   - ``lerna exec --scope myui-cli yarn cli:build``
   - ``lerna exec --scope myui-cli yarn cli``
@@ -172,5 +207,4 @@ app.component('DemoBlock',DemoBlock)
   - 子包之间也可相互使用
     - 只需要前面加上子包名即可
     - 不需要配置别名
-- 关于输出``lib``位置，这里选择的``mini-ui``子包目录
   
