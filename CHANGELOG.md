@@ -2,7 +2,6 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
-<<<<<<< HEAD
 ### [0.0.3](https://github.com/zxlfly/mini-ui/compare/v0.0.2...v0.0.3) (2021-12-15)
 
 
@@ -10,8 +9,6 @@ All notable changes to this project will be documented in this file. See [standa
 
 * 修复没有自动生成log问题 ([613037e](https://github.com/zxlfly/mini-ui/commit/613037ef9440a75edcfcd20e8100fef559c09d2d))
 
-=======
->>>>>>> 613037ef9440a75edcfcd20e8100fef559c09d2d
 ### 0.0.2 (2021-12-15)
 
 

@@ -1,10 +1,6 @@
 {
   "name": "mini-ui",
-<<<<<<< HEAD
   "version": "0.0.3",
-=======
-  "version": "0.0.2",
->>>>>>> 613037ef9440a75edcfcd20e8100fef559c09d2d
   "main": "mini-ui.umd.js",
   "module": "mini-ui.es.js",
   "private": true,

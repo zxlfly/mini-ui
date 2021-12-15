@@ -1,8 +1,4 @@
 #!/bin/sh
 . "$(dirname "$0")/_/husky.sh"
 
-<<<<<<< HEAD
 npm run lint && npx --no-install lint-staged 
-=======
-npx lint-staged && npm test
->>>>>>> 613037ef9440a75edcfcd20e8100fef559c09d2d
