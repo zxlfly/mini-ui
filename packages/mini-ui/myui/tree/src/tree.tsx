@@ -16,7 +16,6 @@ export default defineComponent({
 		const { data,checkable } = toRefs(props)
 		const { openedData, toggle } = useToggle(data.value)
 		const { nodeClassNameReflect, handleInitNodeClassNameReflect, handleClickOnNode } = useHighlightNode()
-		console.log("test")
 		// 增加缩进的展位元素
 		const Indent = () => {
 			return <span style="display: inline-block; width: 16px; height: 16px;"></span>
