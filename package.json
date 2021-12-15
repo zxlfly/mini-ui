@@ -1,6 +1,6 @@
 {
   "name": "mini-ui",
-  "version": "0.0.1",
+  "version": "0.0.3",
   "main": "mini-ui.umd.js",
   "module": "mini-ui.es.js",
   "private": true,
@@ -57,6 +57,8 @@
     "src/**/*.scss": [
       "stylelint --fix"
     ],
-    "src/**/*.{js,vue,ts,tsx}": "eslint --fix"
+    "src/**/*.{js,vue,ts,tsx}": [
+      "eslint --fix"
+    ]
   }
 }
