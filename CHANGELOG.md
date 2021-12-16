@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.5](https://github.com/zxlfly/mini-ui/compare/v0.0.4...v0.0.5) (2021-12-15)
+
+
+### Features
+
+* test ([499b4a6](https://github.com/zxlfly/mini-ui/commit/499b4a6095f507ad9112fc865fa04af87061f518))
+* test ([217ec9f](https://github.com/zxlfly/mini-ui/commit/217ec9f9b313c575ee5e848c6720506b5e1eee7f))
+* test ([177440f](https://github.com/zxlfly/mini-ui/commit/177440fd102253e25d35a28e0717231b1429dbc0))
+* test ([c488160](https://github.com/zxlfly/mini-ui/commit/c48816099587523cbfa619997c6dcdf1403df748))
+* test ([d8dca46](https://github.com/zxlfly/mini-ui/commit/d8dca46a1237c187a058bdae02441de7c5e37814))
+* test ([4b17f14](https://github.com/zxlfly/mini-ui/commit/4b17f14021e1d42b9021b43ecca735889a1673c4))
+
 ### [0.0.4](https://github.com/zxlfly/mini-ui/compare/v0.0.2...v0.0.4) (2021-12-15)
 
 

@@ -1,13 +1,13 @@
 {
   "name": "mini-ui",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "main": "mini-ui.umd.js",
   "module": "mini-ui.es.js",
   "private": true,
   "scripts": {
     "dev": "lerna exec --scope mini-ui yarn docs:dev",
     "test": "npm run lint -- --fix",
-    "lint": "eslint ./packages/mini-ui/myui",
+    "lint": "eslint --fix",
     "lint:create": "eslint --init",
     "prepare": "husky install",
     "commit": "cz",
@@ -58,7 +58,7 @@
       "stylelint --fix"
     ],
     "src/**/*.{js,vue,ts,tsx}": [
-      "eslint --fix"
+      "npm run test"
     ]
   }
 }
